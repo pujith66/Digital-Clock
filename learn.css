@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    background-image: url(https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?cs=srgb&dl=pexels-sanaan-3075993.jpg&fm=jpg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#clock_container {
+    display: flex;
+    flex-direction: column;
+    color: rgb(214, 210, 210);
+    font-size: 10vw; /* Changed from 100px to 10vw */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Already responsive */
+}
+
+#clock {
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffcc, #ff6600);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shine 3s linear infinite;
+    text-shadow: 
+        0 0 1vw #fff, 
+        0 0 2vw #ff00cc, 
+        0 0 3vw #ff00cc, 
+        0 0 4vw #ff33cc, 
+        0 0 5vw #ff66cc, 
+        0 0 7.5vw #ff99cc;
+}
+
+
+@keyframes shine {
+    0% { background-position: 0% }
+    100% { background-position: 100% }
+}
+
+#stopwatch{
+    color: antiquewhite;
+    background-color: transparent;
+    height: 8vh;
+    width: 17vw;
+    font-size: 2.5vh;
+    font-family: 'Orbitron', sans-serif;
+    margin-left: 2vw;
+    font-weight: 100%;
+    cursor: pointer;
+    border-radius: 10vh;
+    border: 0.2vh solid antiquewhite;
+    margin-top:5vh;
+    transition:
+        background-color 0.1s ease,
+        color 0.1s ease,
+        transform 0.1s ease,
+        box-shadow 0.1s ease;
+    box-shadow: inset 0 0 2vh 0.5vh white;
+}
+#stopwatch:hover {
+    background-color: antiquewhite;
+    color: #1a1a1a;
+    box-shadow: 0 0 1.5vh 0.5vh rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
